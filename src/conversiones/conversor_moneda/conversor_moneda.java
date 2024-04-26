@@ -38,15 +38,9 @@ public class  conversor_moneda {
 		catch(NumberFormatException | NullPointerException exception) {
 			JOptionPane.showMessageDialog(null,"Valor no valido","Error",JOptionPane.ERROR_MESSAGE);
 			desarrollo intentar_de_nuevo= new desarrollo();
-			intentar_de_nuevo.iniciar();
-
+			intentar_de_nuevo.iniciar();			
 			
-			
-		}
-		
-		
-		
-		
+		}				
 	}
 	
 	public void resultado_conversion(String tipoConvercion, String cantidaDinero) {
@@ -98,16 +92,12 @@ public class  conversor_moneda {
 				break;
 				
 			case "Otros valores":
-				conversor_moneda operacion= new conversor_moneda();
-	
-			
+				conversor_moneda operacion= new conversor_moneda();				
 			default:
 				break;
 				//"De Pesos(MX) a Pesos(COP)",
 		}
-		
-		
-		
+			
 		// obtener la fecha actual 
 		LocalDate actualDate =LocalDate.now();
 		// pasar de tipo LocalDate a String
@@ -123,29 +113,21 @@ public class  conversor_moneda {
 		
 		//pasar datos a la Api
 		API_Conversor respuesta = new API_Conversor();
-		double valor_convertido=respuesta.get(datos_api[0],datos_api[1],datos_api[2],datos_api[3]);
-		
+		double valor_convertido=respuesta.get(datos_api[0],datos_api[1],datos_api[2],datos_api[3]);		
 		
 		//formato decimales del  resultado
 		double valor_formateado=0;
 		
 		valor_formateado=Math.round((valor_convertido*100.0)/100.0);
-		
-		
+			
 		//mostrar conversión
 		JOptionPane.showMessageDialog(null,"El valor de la conversión  "+ tipoConvercion+ " es : $"+ valor_formateado);
 		
 		//mensaje final
 		
 		mensaje_final mensaje_final= new mensaje_final();
-		mensaje_final.mensaje_final();
-		
-		
-		
+		mensaje_final.mensaje_final();	
 	}
-	
-	
-	
 	
 }
 

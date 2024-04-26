@@ -20,11 +20,11 @@ public class API_Conversor {
 		
 		 try {
 			System.out.println("Esperando ejecución");	
-			URL url = new URL ("https://api.apilayer.com/exchangerates_data/convert?to="+pasar_a+"&from="+pasar_De+"&amount="+Cantidad_Dinero+"&apikey=wSIdZtZe37dtPx7doriTCt7sLqjjLo4X");
+			URL url = new URL ("https://api.apilayer.com/exchangerates_data/convert?to="+pasar_a+"&from="+pasar_De+"&amount="+Cantidad_Dinero+"&apikey=f8e69275e013d32db54ec6bd");
 			 //System.out.print(url);
 			 HttpURLConnection c_api =(HttpURLConnection) url.openConnection() ;
 			 c_api.setRequestMethod("GET");
-			 c_api.setRequestProperty("apikey", "wSIdZtZe37dtPx7doriTCt7sLqjjLo4X");
+			 c_api.setRequestProperty("apikey", "f8e69275e013d32db54ec6bd");
 			 
 			 if(c_api.getResponseCode()==200) {
 				
@@ -56,17 +56,9 @@ public class API_Conversor {
 			desarrollo intentar_de_nuevo= new desarrollo();
 			intentar_de_nuevo.iniciar();
 		 }
-		 
-  
-	     
-
-	
+		 	 
 		 return valor_final;
-		 
-		 
-		
-		    
-		   
+		 		   
 	 }
 }
 
